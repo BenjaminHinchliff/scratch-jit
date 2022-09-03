@@ -2583,7 +2583,7 @@ dependencies = [
 [[package]]
 name = "scratch-edu-parser"
 version = "0.1.0"
-source = "git+https://github.com/BenjaminHinchliff/scratch-edu-parser.git#cf0a681f2f2c88c3f288255a31cd130b88c01ac9"
+source = "git+https://github.com/BenjaminHinchliff/scratch-edu-parser.git#f713b3f5ce456e19ab47a4c14fda62c654ba9746"
 dependencies = [
  "indexmap",
  "serde",

@@ -1,6 +1,6 @@
 mod unpack;
 
-use std::fs;
+use std::{env, fs};
 
 use bevy::{
     core_pipeline::clear_color::ClearColorConfig, prelude::*, render::camera::ScalingMode,
@@ -8,12 +8,6 @@ use bevy::{
 };
 use scratch_edu_parser::Project;
 use temp_dir::TempDir;
-
-#[derive(Component)]
-enum Direction {
-    Up,
-    Down,
-}
 
 fn setup_scene(mut commands: Commands) {
     commands.spawn_bundle(Camera2dBundle {
@@ -40,6 +34,10 @@ struct ScratchProject {
     assets: TempDir,
 }
 
+fn deg_to_rad(deg: f32) -> f32 {
+    deg * std::f32::consts::PI / 180.0
+}
+
 fn load_scratch(
     mut commands: Commands,
     scratch: Res<ScratchProject>,
@@ -47,7 +45,6 @@ fn load_scratch(
 ) {
     for (i, target) in scratch.project.targets.iter().enumerate() {
         let costume = &target.costumes[target.current_costume];
-        let scale_factor = 1.0 / costume.bitmap_resolution as f32;
         commands.spawn_bundle(SpriteBundle {
             texture: asset_server.load(
                 scratch
@@ -55,36 +52,25 @@ fn load_scratch(
                     .path()
                     .join(&target.costumes[target.current_costume].md5ext),
             ),
-            transform: Transform::from_xyz(
-                target.x.unwrap_or(0.0),
-                target.y.unwrap_or(0.0),
-                i as f32,
-            )
-            .with_scale(Vec2::splat(scale_factor).extend(1.0)),
+            transform: Transform {
+                translation: Vec3::new(target.x.unwrap_or(0.0), target.y.unwrap_or(0.0), i as f32),
+                rotation: Quat::from_axis_angle(
+                    Vec3::Z,
+                    deg_to_rad(target.direction.map(|t| t - 90.0).unwrap_or(0.0)),
+                ),
+                scale: Vec2::splat(
+                    1.0 / costume.bitmap_resolution as f32
+                        * (target.size.map(|t| t / 100.0).unwrap_or(1.0)),
+                )
+                .extend(1.0),
+            },
             ..default()
         });
     }
 }
 
-/// The sprite is animated by changing its translation depending on the time that has passed since
-/// the last frame.
-fn sprite_movement(time: Res<Time>, mut sprite_position: Query<(&mut Direction, &mut Transform)>) {
-    for (mut logo, mut transform) in &mut sprite_position {
-        match *logo {
-            Direction::Up => transform.translation.y += 150. * time.delta_seconds(),
-            Direction::Down => transform.translation.y -= 150. * time.delta_seconds(),
-        }
-
-        if transform.translation.y > 200. {
-            *logo = Direction::Down;
-        } else if transform.translation.y < -200. {
-            *logo = Direction::Up;
-        }
-    }
-}
-
 fn main() {
-    let project_path = std::env::args().skip(1).next().expect("No project path given");
+    let project_path = env::args().nth(1).expect("No project path given");
     let assets = unpack::unpack_project(project_path).unwrap();
     let project = fs::read_to_string(assets.path().join("project.json")).unwrap();
     let project: Project = serde_json::from_str(&project).unwrap();
@@ -102,6 +88,5 @@ fn main() {
         .insert_resource(ScratchProject { project, assets })
         .add_startup_system(setup_scene)
         .add_startup_system(load_scratch)
-        .add_system(sprite_movement)
         .run();
 }
