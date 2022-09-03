@@ -6,6 +6,7 @@ use bevy::{
     core_pipeline::clear_color::ClearColorConfig, prelude::*, render::camera::ScalingMode,
     window::PresentMode,
 };
+use clap::Parser;
 use scratch_edu_parser::Project;
 use temp_dir::TempDir;
 
@@ -69,9 +70,17 @@ fn load_scratch(
     }
 }
 
+#[derive(Debug, Parser)]
+#[clap(author, version, about, long_about = None)]
+struct Cli {
+    #[clap(value_parser)]
+    project: String,
+}
+
 fn main() {
-    let project_path = env::args().nth(1).expect("No project path given");
-    let assets = unpack::unpack_project(project_path).unwrap();
+    let cli = Cli::parse();
+
+    let assets = unpack::unpack_project(cli.project).unwrap();
     let project = fs::read_to_string(assets.path().join("project.json")).unwrap();
     let project: Project = serde_json::from_str(&project).unwrap();
 
