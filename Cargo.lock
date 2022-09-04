@@ -43,9 +43,9 @@ dependencies = [
 
 [[package]]
 name = "aho-corasick"
-version = "0.7.18"
+version = "0.7.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e37cfd5e7657ada45f742d6e99ca5788580b5c529dc78faf11ece6dc702656f"
+checksum = "b4f55bd91a0978cbfd91c457a164bab8b4001c833b7f323132c0a4e1922dd44e"
 dependencies = [
  "memchr",
 ]
@@ -2669,8 +2669,8 @@ dependencies = [
 
 [[package]]
 name = "scratch-edu-parser"
-version = "0.1.0"
-source = "git+https://github.com/BenjaminHinchliff/scratch-edu-parser.git#f713b3f5ce456e19ab47a4c14fda62c654ba9746"
+version = "0.1.2"
+source = "git+https://github.com/BenjaminHinchliff/scratch-edu-parser.git#e685965eee75e17e8bab823f9a3b0f885e9e1426"
 dependencies = [
  "indexmap",
  "serde",

@@ -25,6 +25,9 @@ fn deg_to_rad(deg: f32) -> f32 {
     deg * std::f32::consts::PI / 180.0
 }
 
+#[derive(Debug, Component)]
+pub struct ScratchSprite;
+
 fn load_scratch(
     mut commands: Commands,
     scratch: Res<ScratchProject>,
@@ -32,7 +35,7 @@ fn load_scratch(
 ) {
     for (i, target) in scratch.project.targets.iter().enumerate() {
         let costume = &target.costumes[target.current_costume];
-        commands.spawn_bundle(SpriteBundle {
+        let mut target_ent = commands.spawn_bundle(SpriteBundle {
             texture: asset_server.load(
                 scratch
                     .assets
@@ -53,6 +56,9 @@ fn load_scratch(
             },
             ..default()
         });
+        if !target.is_stage {
+            target_ent.insert(ScratchSprite);
+        }
     }
 }
 

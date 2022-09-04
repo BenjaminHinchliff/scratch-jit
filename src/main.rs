@@ -6,6 +6,7 @@ use std::fs;
 
 use bevy::{prelude::*, window::PresentMode};
 use clap::Parser;
+use interpreter::InterpreterPlugin;
 use renderer::Renderer;
 use scratch_edu_parser::Project;
 use temp_dir::TempDir;
@@ -41,5 +42,6 @@ fn main() {
         .add_system(bevy::window::close_on_esc)
         .insert_resource(ScratchProject { project, assets })
         .add_plugin(Renderer)
+        .add_plugin(InterpreterPlugin)
         .run();
 }
