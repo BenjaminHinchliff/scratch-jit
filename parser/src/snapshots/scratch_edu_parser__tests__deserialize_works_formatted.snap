@@ -1,0 +1,746 @@
+---
+source: src/lib.rs
+expression: "&project"
+---
+Project {
+    targets: [
+        Target {
+            is_stage: true,
+            name: "Stage",
+            variables: {
+                "C6~mYt}OS2f)KPnUh_T}": Variable {
+                    name: "steps",
+                    value: String(
+                        "16",
+                    ),
+                },
+                "j|Z=BNm:;ecfjvitqmm/": Variable {
+                    name: "radius",
+                    value: String(
+                        "150",
+                    ),
+                },
+            },
+            lists: {
+                "(SWobHM^K8`la0eQD/x1": List {
+                    name: "points",
+                    data: [
+                        String(
+                            "(-29.2635483, -150)",
+                        ),
+                        String(
+                            "(29.2635483, -150)",
+                        ),
+                        String(
+                            "(83.33553494605091, -127.60264978674883)",
+                        ),
+                        String(
+                            "(124.72044183507104, -86.2177428977287)",
+                        ),
+                        String(
+                            "(147.11779204832223, -32.14575625167778)",
+                        ),
+                        String(
+                            "(147.11779204832223, 26.38134034832222)",
+                        ),
+                        String(
+                            "(124.72044183507106, 80.45332699437313)",
+                        ),
+                        String(
+                            "(83.33553494605093, 121.83823388339326)",
+                        ),
+                        String(
+                            "(29.26354830000001, 144.23558409664443)",
+                        ),
+                        String(
+                            "(-29.26354829999999, 144.23558409664443)",
+                        ),
+                        String(
+                            "(-83.33553494605093, 121.83823388339329)",
+                        ),
+                        String(
+                            "(-124.72044183507106, 80.45332699437316)",
+                        ),
+                        String(
+                            "(-147.1177920483222, 26.381340348322233)",
+                        ),
+                        String(
+                            "(-147.1177920483222, -32.14575625167777)",
+                        ),
+                        String(
+                            "(-124.72044183507103, -86.21774289772868)",
+                        ),
+                        String(
+                            "(-83.3355349460509, -127.60264978674881)",
+                        ),
+                    ],
+                },
+            },
+            blocks: {},
+            current_costume: 0,
+            costumes: [
+                Costume {
+                    name: "Xy-grid",
+                    bitmap_resolution: 2,
+                    data_format: "png",
+                    asset_id: "9838d02002d05f88dc54d96494fbc202",
+                    md5ext: "9838d02002d05f88dc54d96494fbc202.png",
+                    rotation_center_x: 480,
+                    rotation_center_y: 360,
+                },
+            ],
+            volume: 100,
+            x: None,
+            y: None,
+            size: None,
+            direction: None,
+        },
+        Target {
+            is_stage: false,
+            name: "Sprite1",
+            variables: {
+                "^Us6d;AT#W3ZNbuuIV[B": Variable {
+                    name: "theta",
+                    value: Float(
+                        22.5,
+                    ),
+                },
+                "#P0P?cupOWKvDDq3q3|a": Variable {
+                    name: "dist",
+                    value: Float(
+                        58.527096,
+                    ),
+                },
+            },
+            lists: {},
+            blocks: {
+                "wuKi.YBOv%CczMKhCC)g": Block {
+                    opcode: Event(
+                        WhenFlagClicked,
+                    ),
+                    next: Some(
+                        "RY4UEaw;E_I6U5uE^8}G",
+                    ),
+                    parent: None,
+                    shadow: false,
+                    top_level: true,
+                    x: Some(
+                        140,
+                    ),
+                    y: Some(
+                        57,
+                    ),
+                },
+                ",(q[[/Qu$uhu+^X0R$H-": Block {
+                    opcode: Motion(
+                        MoveSteps,
+                    ),
+                    next: Some(
+                        "DU^74P~Y5ky.b*Wd),+v",
+                    ),
+                    parent: Some(
+                        "J5nD?~W$~j]/5O7{,UQ+",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "DU^74P~Y5ky.b*Wd),+v": Block {
+                    opcode: Motion(
+                        TurnLeft,
+                    ),
+                    next: None,
+                    parent: Some(
+                        ",(q[[/Qu$uhu+^X0R$H-",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "m@-yfgj]T+}4pgh4(J[W": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "IE;ZaB:g_ED@}l0ynJ[d",
+                    ),
+                    parent: Some(
+                        "v6#Sw,D5L!XUIkQivsf4",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "%*H%-#0bOx0{iJD4N!sH": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        ".6j6y^4]K}.yff$7RZxw",
+                    ),
+                    parent: Some(
+                        "^u65_=E%V}7SqYpkCF/H",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "2Q~mfW`;Nm^atb*AG%2x": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "wpG3,%[rH1]02NlIQc{#",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "#kP~W12oZ5(]Z8^|e1Jv": Block {
+                    opcode: Motion(
+                        GoToXY,
+                    ),
+                    next: Some(
+                        "v6#Sw,D5L!XUIkQivsf4",
+                    ),
+                    parent: Some(
+                        "2rlc;O:G~]~]Mc{TB~/d",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                ".6j6y^4]K}.yff$7RZxw": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "~XNz_%Ve6XwUb_:HT.Lj",
+                    ),
+                    parent: Some(
+                        "%*H%-#0bOx0{iJD4N!sH",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "H?2pu-x=6wo*a(uzeBm_": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "#kP~W12oZ5(]Z8^|e1Jv",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "7L}[*FkO#IZ0XDS0A.iW": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "$J?vD3{!5{;[hyXsr6@6",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "X^(2g,ImPSaPh+O1.o`N": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "MQ3.(a[S4;9v^)R-#iyU",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "wpG3,%[rH1]02NlIQc{#": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "/YYq}_s5[-[APP8)n8Wx",
+                    ),
+                    parent: Some(
+                        "_qRR$@8-ePc:x/VNVyOo",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "jLWP!dTYil@Lkhe#?[kN": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "X^(2g,ImPSaPh+O1.o`N",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "MQ3.(a[S4;9v^)R-#iyU": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "7L}[*FkO#IZ0XDS0A.iW",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "$J?vD3{!5{;[hyXsr6@6": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "Aao1:M|a@g;m@WDkTRSW",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "D$_o#uSPl=0!+?(K`})h": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "#kP~W12oZ5(]Z8^|e1Jv",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "z/@2bKM]bG?55xqf3Y`G": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "D$_o#uSPl=0!+?(K`})h",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "`/.,a:BS$asBfaEv{xg=": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "^u65_=E%V}7SqYpkCF/H",
+                    ),
+                    parent: Some(
+                        "RY4UEaw;E_I6U5uE^8}G",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "v6#Sw,D5L!XUIkQivsf4": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "m@-yfgj]T+}4pgh4(J[W",
+                    ),
+                    parent: Some(
+                        "#kP~W12oZ5(]Z8^|e1Jv",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "^u65_=E%V}7SqYpkCF/H": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "%*H%-#0bOx0{iJD4N!sH",
+                    ),
+                    parent: Some(
+                        "`/.,a:BS$asBfaEv{xg=",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "2rlc;O:G~]~]Mc{TB~/d": Block {
+                    opcode: Motion(
+                        PointInDirection,
+                    ),
+                    next: Some(
+                        "#kP~W12oZ5(]Z8^|e1Jv",
+                    ),
+                    parent: Some(
+                        "/YYq}_s5[-[APP8)n8Wx",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "IE;ZaB:g_ED@}l0ynJ[d": Block {
+                    opcode: Motion(
+                        MoveSteps,
+                    ),
+                    next: None,
+                    parent: Some(
+                        "m@-yfgj]T+}4pgh4(J[W",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "J%srEg?g42z`w+Qf`q,H": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "IE;ZaB:g_ED@}l0ynJ[d",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "RY4UEaw;E_I6U5uE^8}G": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "`/.,a:BS$asBfaEv{xg=",
+                    ),
+                    parent: Some(
+                        "wuKi.YBOv%CczMKhCC)g",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "Aao1:M|a@g;m@WDkTRSW": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "$J?vD3{!5{;[hyXsr6@6",
+                    ),
+                    parent: None,
+                    shadow: false,
+                    top_level: true,
+                    x: Some(
+                        505,
+                    ),
+                    y: Some(
+                        58,
+                    ),
+                },
+                "0fQ%,2ZXQ6heMZ2qZD(S": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "Aao1:M|a@g;m@WDkTRSW",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "?Zi}s|2*2FK;wB|GA_ir": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "0fQ%,2ZXQ6heMZ2qZD(S",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "r8?mN_|pBWy_#;JezNa7": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "0fQ%,2ZXQ6heMZ2qZD(S",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "m*08495XmNaAWNiY;D?=": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "MQ3.(a[S4;9v^)R-#iyU",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "Gm)Q+PSU8l(#~WwmD||F": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "jLWP!dTYil@Lkhe#?[kN",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "/YYq}_s5[-[APP8)n8Wx": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "2rlc;O:G~]~]Mc{TB~/d",
+                    ),
+                    parent: Some(
+                        "wpG3,%[rH1]02NlIQc{#",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "i}qk*]@7e++r)^?+**9j": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "_qRR$@8-ePc:x/VNVyOo",
+                    ),
+                    parent: None,
+                    shadow: false,
+                    top_level: true,
+                    x: Some(
+                        479,
+                    ),
+                    y: Some(
+                        286,
+                    ),
+                },
+                "NtUA?$SvPxN/wf+!?KUR": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "i}qk*]@7e++r)^?+**9j",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "~XNz_%Ve6XwUb_:HT.Lj": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        ".6j6y^4]K}.yff$7RZxw",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "V.?-IrVrP(LVAU-|u6dV": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "NtUA?$SvPxN/wf+!?KUR",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "a@qtJVJwF-2MiHdexr.s": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "2Q~mfW`;Nm^atb*AG%2x",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "^VP+[-KD%-b6,9#bdu|5": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "m@-yfgj]T+}4pgh4(J[W",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "s+xs/06+Y}?|x(]mG!Uh": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "NtUA?$SvPxN/wf+!?KUR",
+                    ),
+                    shadow: true,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "t?-ZP^d*6C*^0Cc$$iF?": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "/YYq}_s5[-[APP8)n8Wx",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                ")w;W=@8m~E}nX),`!pnI": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "H?2pu-x=6wo*a(uzeBm_",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "_qRR$@8-ePc:x/VNVyOo": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "wpG3,%[rH1]02NlIQc{#",
+                    ),
+                    parent: Some(
+                        "i}qk*]@7e++r)^?+**9j",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "J5nD?~W$~j]/5O7{,UQ+": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        ",(q[[/Qu$uhu+^X0R$H-",
+                    ),
+                    parent: Some(
+                        "m@-yfgj]T+}4pgh4(J[W",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "2@76w_wrpIt.1G1mf:|!": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "J5nD?~W$~j]/5O7{,UQ+",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "M6`vB2CC14G.zRIh:~6k": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "2@76w_wrpIt.1G1mf:|!",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "lF:Y;T9ZWI5ZD^jxOlU?": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "2@76w_wrpIt.1G1mf:|!",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "=hVXsGi#sbI~NH-Uqx=X": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "M6`vB2CC14G.zRIh:~6k",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "D-O2Sp6nHeo_3J_E(mo;": Block {
+                    opcode: Motion(
+                        XPosition,
+                    ),
+                    next: None,
+                    parent: Some(
+                        "lF:Y;T9ZWI5ZD^jxOlU?",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "^V)AQV(KtUOHV!fTL%=%": Block {
+                    opcode: Motion(
+                        YPosition,
+                    ),
+                    next: None,
+                    parent: Some(
+                        "=hVXsGi#sbI~NH-Uqx=X",
+                    ),
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+            },
+            current_costume: 0,
+            costumes: [
+                Costume {
+                    name: "costume1",
+                    bitmap_resolution: 1,
+                    data_format: "svg",
+                    asset_id: "b7853f557e4426412e64bb3da6531a99",
+                    md5ext: "b7853f557e4426412e64bb3da6531a99.svg",
+                    rotation_center_x: 48,
+                    rotation_center_y: 50,
+                },
+                Costume {
+                    name: "costume2",
+                    bitmap_resolution: 1,
+                    data_format: "svg",
+                    asset_id: "e6ddc55a6ddd9cc9d84fe0b4c21e016f",
+                    md5ext: "e6ddc55a6ddd9cc9d84fe0b4c21e016f.svg",
+                    rotation_center_x: 46,
+                    rotation_center_y: 53,
+                },
+            ],
+            volume: 100,
+            x: Some(
+                1.7763568e-14,
+            ),
+            y: Some(
+                -150.0,
+            ),
+            size: Some(
+                30.0,
+            ),
+            direction: Some(
+                90.0,
+            ),
+        },
+    ],
+    extensions: [
+        "pen",
+    ],
+    meta: Meta {
+        semver: "3.0.0",
+        vm: "1.0.5",
+        agent: "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0",
+    },
+}
