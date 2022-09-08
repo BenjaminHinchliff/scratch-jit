@@ -3,11 +3,11 @@ use serde::{
     Deserialize,
 };
 
-#[derive(Debug)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum OpCode {
     Event(Event),
     Motion(Motion),
-    Argument,
+    Control(Control),
     Unknown,
 }
 
@@ -30,6 +30,7 @@ impl<'de> Visitor<'de> for OpCodeVisitor {
         match category {
             "event" => Event::deserialize(block.into_deserializer()).map(OpCode::Event),
             "motion" => Motion::deserialize(block.into_deserializer()).map(OpCode::Motion),
+            "control" => Control::deserialize(block.into_deserializer()).map(OpCode::Control),
             _ => Ok(OpCode::Unknown),
         }
     }
@@ -44,15 +45,15 @@ impl<'de> Deserialize<'de> for OpCode {
     }
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone, PartialEq, Eq)]
 #[serde(rename_all = "lowercase")]
 pub enum Event {
     WhenFlagClicked,
     #[serde(other)]
-    Unknown
+    Unknown,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone, PartialEq, Eq)]
 #[serde(rename_all = "lowercase")]
 pub enum Motion {
     MoveSteps,
@@ -61,6 +62,14 @@ pub enum Motion {
     PointInDirection,
     XPosition,
     YPosition,
+    #[serde(other)]
+    Unknown,
+}
+
+#[derive(Debug, Deserialize, Clone, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
+pub enum Control {
+    Repeat,
     #[serde(other)]
     Unknown,
 }

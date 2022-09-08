@@ -1,0 +1,297 @@
+---
+source: parser/src/lib.rs
+expression: "&project"
+---
+Project {
+    targets: [
+        Target {
+            is_stage: true,
+            name: "Stage",
+            variables: {
+                "L2bPa|PYEF%-q:^eq^]E": Variable {
+                    name: "time",
+                    value: Float(
+                        1.985,
+                    ),
+                },
+            },
+            lists: {
+                "(SWobHM^K8`la0eQD/x1": List {
+                    name: "points",
+                    data: [
+                        String(
+                            "(-25.166651538, -129)",
+                        ),
+                        String(
+                            "(25.166651538, -129)",
+                        ),
+                        String(
+                            "(71.66856005360378, -109.73827881660398)",
+                        ),
+                        String(
+                            "(107.2595799781611, -74.14725889204666)",
+                        ),
+                        String(
+                            "(126.52130116155712, -27.645350376442877)",
+                        ),
+                        String(
+                            "(126.52130116155712, 22.687952699557123)",
+                        ),
+                        String(
+                            "(107.25957997816111, 69.1898612151609)",
+                        ),
+                        String(
+                            "(71.66856005360381, 104.78088113971822)",
+                        ),
+                        String(
+                            "(25.166651538000025, 124.04260232311424)",
+                        ),
+                        String(
+                            "(-25.166651537999975, 124.04260232311424)",
+                        ),
+                        String(
+                            "(-71.66856005360378, 104.78088113971825)",
+                        ),
+                        String(
+                            "(-107.2595799781611, 69.18986121516093)",
+                        ),
+                        String(
+                            "(-126.52130116155709, 22.687952699557137)",
+                        ),
+                        String(
+                            "(-126.52130116155709, -27.645350376442863)",
+                        ),
+                        String(
+                            "(-107.25957997816107, -74.14725889204665)",
+                        ),
+                        String(
+                            "(-71.66856005360376, -109.73827881660395)",
+                        ),
+                    ],
+                },
+            },
+            blocks: {},
+            current_costume: 0,
+            costumes: [
+                Costume {
+                    name: "Xy-grid",
+                    bitmap_resolution: 2,
+                    data_format: "png",
+                    asset_id: "9838d02002d05f88dc54d96494fbc202",
+                    md5ext: "9838d02002d05f88dc54d96494fbc202.png",
+                    rotation_center_x: 480,
+                    rotation_center_y: 360,
+                },
+            ],
+            volume: 100,
+            x: None,
+            y: None,
+            size: None,
+            direction: None,
+        },
+        Target {
+            is_stage: false,
+            name: "Sprite1",
+            variables: {},
+            lists: {},
+            blocks: {
+                "wuKi.YBOv%CczMKhCC)g": Block {
+                    opcode: Event(
+                        WhenFlagClicked,
+                    ),
+                    next: Some(
+                        "}yqtb6@8rJTyr0|T9xi*",
+                    ),
+                    parent: None,
+                    inputs: {},
+                    shadow: false,
+                    top_level: true,
+                    x: Some(
+                        113,
+                    ),
+                    y: Some(
+                        100,
+                    ),
+                },
+                "}yqtb6@8rJTyr0|T9xi*": Block {
+                    opcode: Motion(
+                        GoToXY,
+                    ),
+                    next: Some(
+                        "|!lQq$nfHcy]v8/:eC62",
+                    ),
+                    parent: Some(
+                        "wuKi.YBOv%CczMKhCC)g",
+                    ),
+                    inputs: {
+                        "X": Input {
+                            shadow_state: Shadow,
+                            data: [
+                                Shadow(
+                                    Number(
+                                        -120.0,
+                                    ),
+                                ),
+                            ],
+                        },
+                        "Y": Input {
+                            shadow_state: Shadow,
+                            data: [
+                                Shadow(
+                                    Number(
+                                        0.0,
+                                    ),
+                                ),
+                            ],
+                        },
+                    },
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "l/fdaJ4^t=|LvM+zvlK,": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "571ah.g-H+%Hx/ik#t8d",
+                    ),
+                    parent: Some(
+                        "|!lQq$nfHcy]v8/:eC62",
+                    ),
+                    inputs: {
+                        "TIMES": Input {
+                            shadow_state: Shadow,
+                            data: [
+                                Shadow(
+                                    PositiveInteger(
+                                        60,
+                                    ),
+                                ),
+                            ],
+                        },
+                        "SUBSTACK": Input {
+                            shadow_state: NoShadow,
+                            data: [
+                                BlockRef(
+                                    "7sPY@|}^q]20:tiI=[Zu",
+                                ),
+                            ],
+                        },
+                    },
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "7sPY@|}^q]20:tiI=[Zu": Block {
+                    opcode: Motion(
+                        MoveSteps,
+                    ),
+                    next: None,
+                    parent: Some(
+                        "l/fdaJ4^t=|LvM+zvlK,",
+                    ),
+                    inputs: {
+                        "STEPS": Input {
+                            shadow_state: Shadow,
+                            data: [
+                                Shadow(
+                                    Number(
+                                        4.0,
+                                    ),
+                                ),
+                            ],
+                        },
+                    },
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "|!lQq$nfHcy]v8/:eC62": Block {
+                    opcode: Unknown,
+                    next: Some(
+                        "l/fdaJ4^t=|LvM+zvlK,",
+                    ),
+                    parent: Some(
+                        "}yqtb6@8rJTyr0|T9xi*",
+                    ),
+                    inputs: {},
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "571ah.g-H+%Hx/ik#t8d": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "l/fdaJ4^t=|LvM+zvlK,",
+                    ),
+                    inputs: {
+                        "VALUE": Input {
+                            shadow_state: Obscured,
+                            data: [
+                                BlockRef(
+                                    "qHwdIfSrvU6_4m6~sli2",
+                                ),
+                                Shadow(
+                                    String(
+                                        "0",
+                                    ),
+                                ),
+                            ],
+                        },
+                    },
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+                "qHwdIfSrvU6_4m6~sli2": Block {
+                    opcode: Unknown,
+                    next: None,
+                    parent: Some(
+                        "571ah.g-H+%Hx/ik#t8d",
+                    ),
+                    inputs: {},
+                    shadow: false,
+                    top_level: false,
+                    x: None,
+                    y: None,
+                },
+            },
+            current_costume: 0,
+            costumes: [
+                Costume {
+                    name: "costume1",
+                    bitmap_resolution: 2,
+                    data_format: "png",
+                    asset_id: "70854154c9fe5c15b167942bd4583899",
+                    md5ext: "70854154c9fe5c15b167942bd4583899.png",
+                    rotation_center_x: 95,
+                    rotation_center_y: 99,
+                },
+            ],
+            volume: 100,
+            x: Some(
+                120.0,
+            ),
+            y: Some(
+                0.0,
+            ),
+            size: Some(
+                100.0,
+            ),
+            direction: Some(
+                90.0,
+            ),
+        },
+    ],
+    extensions: [],
+    meta: Meta {
+        semver: "3.0.0",
+        vm: "1.1.6",
+        agent: "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0",
+    },
+}

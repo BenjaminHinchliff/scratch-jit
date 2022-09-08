@@ -1,0 +1,317 @@
+{
+  "targets": [
+    {
+      "isStage": true,
+      "name": "Stage",
+      "variables": {
+        "L2bPa|PYEF%-q:^eq^]E": [
+          "time",
+          1.985
+        ]
+      },
+      "lists": {
+        "(SWobHM^K8`la0eQD/x1": [
+          "points",
+          [
+            "(-25.166651538, -129)",
+            "(25.166651538, -129)",
+            "(71.66856005360378, -109.73827881660398)",
+            "(107.2595799781611, -74.14725889204666)",
+            "(126.52130116155712, -27.645350376442877)",
+            "(126.52130116155712, 22.687952699557123)",
+            "(107.25957997816111, 69.1898612151609)",
+            "(71.66856005360381, 104.78088113971822)",
+            "(25.166651538000025, 124.04260232311424)",
+            "(-25.166651537999975, 124.04260232311424)",
+            "(-71.66856005360378, 104.78088113971825)",
+            "(-107.2595799781611, 69.18986121516093)",
+            "(-126.52130116155709, 22.687952699557137)",
+            "(-126.52130116155709, -27.645350376442863)",
+            "(-107.25957997816107, -74.14725889204665)",
+            "(-71.66856005360376, -109.73827881660395)"
+          ]
+        ]
+      },
+      "broadcasts": {
+        "+gf36yPB*]/TDN$Gg5:^": "fish"
+      },
+      "blocks": {},
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Xy-grid",
+          "bitmapResolution": 2,
+          "dataFormat": "png",
+          "assetId": "9838d02002d05f88dc54d96494fbc202",
+          "md5ext": "9838d02002d05f88dc54d96494fbc202.png",
+          "rotationCenterX": 480,
+          "rotationCenterY": 360
+        }
+      ],
+      "sounds": [
+        {
+          "name": "pop",
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 48000,
+          "sampleCount": 1124,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 0,
+      "tempo": 60,
+      "videoTransparency": 50,
+      "videoState": "on",
+      "textToSpeechLanguage": null
+    },
+    {
+      "isStage": false,
+      "name": "Sprite1",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "wuKi.YBOv%CczMKhCC)g": {
+          "opcode": "event_whenflagclicked",
+          "next": "}yqtb6@8rJTyr0|T9xi*",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 113,
+          "y": 100
+        },
+        "}yqtb6@8rJTyr0|T9xi*": {
+          "opcode": "motion_gotoxy",
+          "next": "|!lQq$nfHcy]v8/:eC62",
+          "parent": "wuKi.YBOv%CczMKhCC)g",
+          "inputs": {
+            "X": [
+              1,
+              [
+                4,
+                "-120"
+              ]
+            ],
+            "Y": [
+              1,
+              [
+                4,
+                "0"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "l/fdaJ4^t=|LvM+zvlK,": {
+          "opcode": "control_repeat",
+          "next": "571ah.g-H+%Hx/ik#t8d",
+          "parent": "|!lQq$nfHcy]v8/:eC62",
+          "inputs": {
+            "TIMES": [
+              1,
+              [
+                6,
+                "60"
+              ]
+            ],
+            "SUBSTACK": [
+              2,
+              "7sPY@|}^q]20:tiI=[Zu"
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "7sPY@|}^q]20:tiI=[Zu": {
+          "opcode": "motion_movesteps",
+          "next": null,
+          "parent": "l/fdaJ4^t=|LvM+zvlK,",
+          "inputs": {
+            "STEPS": [
+              1,
+              [
+                4,
+                "4"
+              ]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "|!lQq$nfHcy]v8/:eC62": {
+          "opcode": "sensing_resettimer",
+          "next": "l/fdaJ4^t=|LvM+zvlK,",
+          "parent": "}yqtb6@8rJTyr0|T9xi*",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "571ah.g-H+%Hx/ik#t8d": {
+          "opcode": "data_setvariableto",
+          "next": null,
+          "parent": "l/fdaJ4^t=|LvM+zvlK,",
+          "inputs": {
+            "VALUE": [
+              3,
+              "qHwdIfSrvU6_4m6~sli2",
+              [
+                10,
+                "0"
+              ]
+            ]
+          },
+          "fields": {
+            "VARIABLE": [
+              "time",
+              "L2bPa|PYEF%-q:^eq^]E"
+            ]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "qHwdIfSrvU6_4m6~sli2": {
+          "opcode": "sensing_timer",
+          "next": null,
+          "parent": "571ah.g-H+%Hx/ik#t8d",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "costume1",
+          "bitmapResolution": 2,
+          "dataFormat": "png",
+          "assetId": "70854154c9fe5c15b167942bd4583899",
+          "md5ext": "70854154c9fe5c15b167942bd4583899.png",
+          "rotationCenterX": 95,
+          "rotationCenterY": 99
+        }
+      ],
+      "sounds": [
+        {
+          "name": "Meow",
+          "assetId": "83c36d806dc92327b9e7049a565c6bff",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 48000,
+          "sampleCount": 40682,
+          "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 1,
+      "visible": true,
+      "x": 120,
+      "y": 0,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    }
+  ],
+  "monitors": [
+    {
+      "id": "(SWobHM^K8`la0eQD/x1",
+      "mode": "list",
+      "opcode": "data_listcontents",
+      "params": {
+        "LIST": "points"
+      },
+      "spriteName": null,
+      "value": [
+        "(-25.166651538, -129)",
+        "(25.166651538, -129)",
+        "(71.66856005360378, -109.73827881660398)",
+        "(107.2595799781611, -74.14725889204666)",
+        "(126.52130116155712, -27.645350376442877)",
+        "(126.52130116155712, 22.687952699557123)",
+        "(107.25957997816111, 69.1898612151609)",
+        "(71.66856005360381, 104.78088113971822)",
+        "(25.166651538000025, 124.04260232311424)",
+        "(-25.166651537999975, 124.04260232311424)",
+        "(-71.66856005360378, 104.78088113971825)",
+        "(-107.2595799781611, 69.18986121516093)",
+        "(-126.52130116155709, 22.687952699557137)",
+        "(-126.52130116155709, -27.645350376442863)",
+        "(-107.25957997816107, -74.14725889204665)",
+        "(-71.66856005360376, -109.73827881660395)"
+      ],
+      "width": 300,
+      "height": 112,
+      "x": 176,
+      "y": 2,
+      "visible": false
+    },
+    {
+      "id": "4}VQnW22J/Nv3(jJSUe6_volume",
+      "mode": "default",
+      "opcode": "sound_volume",
+      "params": {},
+      "spriteName": "Sprite1",
+      "value": 0,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 110,
+      "visible": false,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "timer",
+      "mode": "default",
+      "opcode": "sensing_timer",
+      "params": {},
+      "spriteName": null,
+      "value": 28.042,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 5,
+      "visible": false,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "L2bPa|PYEF%-q:^eq^]E",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "time"
+      },
+      "spriteName": null,
+      "value": 1.985,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 7,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    }
+  ],
+  "extensions": [],
+  "meta": {
+    "semver": "3.0.0",
+    "vm": "1.1.6",
+    "agent": "Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0"
+  }
+}

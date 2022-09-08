@@ -6,14 +6,15 @@ mod costume;
 mod list;
 mod value;
 mod variable;
-mod op_codes;
+pub mod op_codes;
 pub use block::Block;
 pub use costume::Costume;
 pub use list::List;
 pub use value::Value;
 pub use variable::Variable;
+pub use op_codes::OpCode;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Target {
     pub is_stage: bool,

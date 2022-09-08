@@ -9,6 +9,7 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 bevy = "0.8.1"
 clap = { version = "3.2.20", features = ["derive"] }
+indexmap = { version = "1.9.1", features = ["serde"] }
 scratch-edu-parser = { path = "../parser" }
 serde_json = "1.0.85"
 temp-dir = "0.1.11"

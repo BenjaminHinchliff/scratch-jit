@@ -1,5 +1,6 @@
-use crate::ScratchProject;
+use crate::{interpreter::ScratchInterpreter, ScratchProject};
 use bevy::{core_pipeline::clear_color::ClearColorConfig, prelude::*, render::camera::ScalingMode};
+use scratch_edu_parser::project;
 
 fn setup_scene(mut commands: Commands) {
     commands.spawn_bundle(Camera2dBundle {
@@ -24,6 +25,9 @@ fn setup_scene(mut commands: Commands) {
 fn deg_to_rad(deg: f32) -> f32 {
     deg * std::f32::consts::PI / 180.0
 }
+
+#[derive(Debug, Component)]
+pub struct ScratchTarget(pub project::Target);
 
 #[derive(Debug, Component)]
 pub struct ScratchSprite;
@@ -56,9 +60,21 @@ fn load_scratch(
             },
             ..default()
         });
+        target_ent
+            .insert(ScratchTarget(target.clone()))
+            .insert(ScratchInterpreter::new(&target.blocks));
         if !target.is_stage {
             target_ent.insert(ScratchSprite);
         }
+    }
+}
+
+fn update_sprite_transforms(
+    mut sprites: Query<(&mut Transform, &ScratchTarget), With<ScratchSprite>>,
+) {
+    for (mut transform, ScratchTarget(sprite)) in &mut sprites {
+        transform.translation.x = sprite.x.unwrap();
+        transform.translation.y = sprite.y.unwrap();
     }
 }
 
@@ -67,6 +83,7 @@ pub struct Renderer;
 impl Plugin for Renderer {
     fn build(&self, app: &mut App) {
         app.add_startup_system(setup_scene)
-            .add_startup_system(load_scratch);
+            .add_startup_system(load_scratch)
+            .add_system(update_sprite_transforms);
     }
 }

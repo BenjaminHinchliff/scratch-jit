@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-mod sprite;
+pub mod sprite;
 pub use sprite::Target;
 mod meta;
 pub use meta::Meta;
